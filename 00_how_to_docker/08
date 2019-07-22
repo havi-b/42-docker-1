@@ -1,0 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    08                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hbhuiyan <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/07/16 14:22:00 by hbhuiyan          #+#    #+#              #
+#    Updated: 2019/07/16 16:02:03 by hbhuiyan         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+8. Launch a shell from an alpine container, and make sure that you can interact
+directly with the container via your terminal, and that the container deletes itself
+once the shell’s execution is done.
+
+docker run -it --rm alpine /bin/ash
+

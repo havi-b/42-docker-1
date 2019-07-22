@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    20                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hbhuiyan <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/07/16 22:06:54 by hbhuiyan          #+#    #+#              #
+#    Updated: 2019/07/16 22:15:38 by hbhuiyan         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+20. Create a local swarm, the Char virtual machine should be its manager.
+
+docker swarm init --advertise-addr $(docker-machine ip Char)
+
+#Check node to verify char is Master
+docker node ls
+

@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    07                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hbhuiyan <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/07/16 13:54:25 by hbhuiyan          #+#    #+#              #
+#    Updated: 2019/07/16 16:02:11 by hbhuiyan         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+7. Get the internal IP address of the overlord container without starting its shell and
+in one command.
+
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" overlord
+

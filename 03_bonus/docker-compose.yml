@@ -1,0 +1,41 @@
+version: "2"
+services:
+    client:
+        build: ./client
+        image: mern-fe
+        restart: always
+        container_name: frontend
+        ports:
+            - "3000:3000"
+        working_dir: /app/client
+        entrypoint: ["yarn", "start"]
+        links:
+            - api
+        networks:
+            - webappnetwork
+    api:
+        build: ./api
+        image: mern-be
+        restart: always
+        container_name: backend
+        ports:
+            - "5000:5000"
+        entrypoint: ["yarn", "server"]
+        depends_on:
+            - mongodb
+        networks:
+            - webappnetwork
+    mongodb:
+        image: mongo
+        restart: always
+        container_name: mongodb
+        volumes:
+            - ./data-node:/data/db
+        ports:
+            - 27017:27017
+        command: mongod --noauth --smallfiles
+        networks:
+            - webappnetwork
+networks:
+    webappnetwork :
+        driver: bridge
